@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.post('/payumoney', (req, res) => {
+app.post('/pay', (req, res) => {
 
   // console.log(req.body)
 
@@ -68,12 +68,13 @@ app.post('/payumoney', (req, res) => {
   request(options, (error, response, body) => {
     if (error) {
       console.error(error);
-      res.send('An error occurred');
+      res.send(error);
     } else {
       // console.log("***************************************")
       // console.log(response.caseless.dict.location)
 
-      res.send(response.caseless.dict.location)
+      // res.send(response.caseless.dict.location)
+      res.send(response)
     }
   });
 });
