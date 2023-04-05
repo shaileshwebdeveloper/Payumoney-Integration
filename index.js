@@ -100,7 +100,7 @@ app.post('/Paymentfailure', (req, res) => {
   // res.send(req.query)
    
   jsonData = req.body
-  console.log(jsonData)
+  console.log("jsonData", jsonData)
 
   res.redirect("http://localhost:3000/Paymentfailure");
 });
