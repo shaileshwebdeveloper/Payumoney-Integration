@@ -58,8 +58,8 @@ app.post('/pay', (req, res) => {
       firstname: firstname,
       email: email,
       phone: phone,
-      surl: 'http://localhost:3001/Paymentsuccess',
-      furl: 'http://localhost:3001/Paymentfailure',
+      surl: 'https://payumoney.onrender.com/Paymentsuccess',
+      furl: 'https://payumoney.onrender.com/Paymentfailure',
       hash: hash
     }
   };
@@ -94,7 +94,8 @@ let jsonData = {};
 
 
 app.post('/Paymentfailure', (req, res) => {
-  // console.log("*************************************************************")
+
+  console.log("*************************************************************")
   console.log("req", req);
   console.log("res", res)
   // res.send(req.query)
@@ -103,6 +104,7 @@ app.post('/Paymentfailure', (req, res) => {
   console.log("jsonData", jsonData)
 
   res.redirect("http://localhost:3000/Paymentfailure");
+
 });
 
 app.get('/Paymentfailure', (req, res) => {
