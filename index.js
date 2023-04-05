@@ -99,6 +99,7 @@ app.post('/Paymentfailure', (req, res) => {
   // res.send(req.query)
    
   jsonData = req.body
+  console.log(jsonData)
 
   res.redirect("http://localhost:3000/Paymentfailure");
 });
@@ -106,6 +107,7 @@ app.post('/Paymentfailure', (req, res) => {
 app.get('/Paymentfailure', (req, res) => {
   // console.log("req", req, res)
   // console.log('Retrieving JSON data via GET:', jsonData);
+  console.log(jsonData)
   res.send(jsonData);
 
 })
