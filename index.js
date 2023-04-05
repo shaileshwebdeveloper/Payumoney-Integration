@@ -103,7 +103,7 @@ app.post('/Paymentfailure', (req, res) => {
   jsonData = req.body
   console.log("jsonData", jsonData)
 
-  res.redirect("https://payumoney.onrender.com/Paymentfailure");
+  res.redirect("http://localhost:3000/Paymentfailure");
 
 });
 
