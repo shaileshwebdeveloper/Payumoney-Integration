@@ -95,7 +95,8 @@ let jsonData = {};
 
 app.post('/Paymentfailure', (req, res) => {
   // console.log("*************************************************************")
-  // console.log("req", req);
+  console.log("req", req);
+  console.log("res", res)
   // res.send(req.query)
    
   jsonData = req.body
