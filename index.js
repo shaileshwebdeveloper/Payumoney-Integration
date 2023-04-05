@@ -58,7 +58,7 @@ app.post('/pay', (req, res) => {
       firstname: firstname,
       email: email,
       phone: phone,
-      surl: 'http://localhost:3001/Paymentsuccess',
+      surl: 'https://payumoney.onrender.com/Paymentsuccess',
       furl: 'https://payumoney.onrender.com/Paymentfailure',
       hash: hash
     }
