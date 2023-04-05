@@ -93,7 +93,7 @@ app.get('/Paymentsuccess', (req, res) => {
 let jsonData = {};
 
 
-app.post('/Paymentfailure', (req, res) => {
+app.post('https://payumoney.onrender.com/Paymentfailure', (req, res) => {
 
   console.log("*************************************************************")
   console.log("req", req);
@@ -107,7 +107,7 @@ app.post('/Paymentfailure', (req, res) => {
 
 });
 
-app.get('/Paymentfailure', (req, res) => {
+app.get('https://payumoney.onrender.com/Paymentfailure', (req, res) => {
   // console.log("req", req, res)
   // console.log('Retrieving JSON data via GET:', jsonData);
   console.log(jsonData)
