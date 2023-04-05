@@ -58,8 +58,8 @@ app.post('/pay', (req, res) => {
       firstname: firstname,
       email: email,
       phone: phone,
-      surl: 'https://payumoney.onrender.com/Paymentsuccess',
-      furl: 'https://payumoney.onrender.com/Paymentfailure',
+      surl: 'http://localhost:3001/Paymentsuccess',
+      furl: 'http://localhost:3001/Paymentfailure',
       hash: hash
     }
   };
@@ -93,7 +93,7 @@ app.get('/Paymentsuccess', (req, res) => {
 let jsonData = {};
 
 
-app.post('https://payumoney.onrender.com/Paymentfailure', (req, res) => {
+app.post('/Paymentfailure', (req, res) => {
 
   console.log("*************************************************************")
   console.log("req", req);
@@ -107,7 +107,7 @@ app.post('https://payumoney.onrender.com/Paymentfailure', (req, res) => {
 
 });
 
-app.get('https://payumoney.onrender.com/Paymentfailure', (req, res) => {
+app.get('/Paymentfailure', (req, res) => {
   // console.log("req", req, res)
   // console.log('Retrieving JSON data via GET:', jsonData);
   console.log(jsonData)
