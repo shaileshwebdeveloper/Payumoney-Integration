@@ -74,7 +74,7 @@ app.post('/pay', (req, res) => {
       // console.log(response.caseless.dict.location)
 
       // res.send(response.caseless.dict.location)
-      res.send(response)
+      res.send(response.headers.location)
     }
   });
 });
