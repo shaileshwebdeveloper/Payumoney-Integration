@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 const MERCHANT_KEY = process.env.MERCHANT_KEY
 const MERCHANT_SALT = process.env.MERCHANT_SALT
-const PAYU_BASE_URL = process.env.PAYU_BASE_URL
+const PAYU_BASE_URL = 'https://secure.payu.in/_payment'
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -74,7 +74,7 @@ app.post('/pay', (req, res) => {
       // console.log(response.caseless.dict.location)
 
       // res.send(response.caseless.dict.location)
-      res.send(req.body)
+      res.send(response)
     }
   });
 });
