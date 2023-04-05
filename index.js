@@ -59,7 +59,7 @@ app.post('/pay', (req, res) => {
       email: email,
       phone: phone,
       surl: 'http://localhost:3001/Paymentsuccess',
-      furl: 'http://localhost:3001/Paymentfailure',
+      furl: 'https://payumoney.onrender.com/Paymentfailure',
       hash: hash
     }
   };
@@ -103,7 +103,7 @@ app.post('/Paymentfailure', (req, res) => {
   jsonData = req.body
   console.log("jsonData", jsonData)
 
-  res.redirect("http://localhost:3000/Paymentfailure");
+  res.redirect("https://payumoney.onrender.com/Paymentfailure");
 
 });
 
