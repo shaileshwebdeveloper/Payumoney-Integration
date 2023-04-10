@@ -79,18 +79,22 @@ app.post('/pay', (req, res) => {
   });
 });
 
-app.post('/Paymentsuccess', (req, res) => {
+let jsonData = {};
 
+app.post('/Paymentsuccess', (req, res) => {
+  jsonData = req.body
   console.log(req);
   res.send(req.body);
+  res.redirect("http://localhost:3000/Paymentsuccess");
 
 });
 
 app.get('/Paymentsuccess', (req, res) => {
-    res.send(req)
+  console.log(jsonData)
+  res.send(jsonData);
 })
 
-let jsonData = {};
+
 
 
 app.post('/Paymentfailure', (req, res) => {
