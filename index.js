@@ -84,7 +84,6 @@ let jsonData = {};
 app.post('/Paymentsuccess', (req, res) => {
   jsonData = req.body
   console.log(req);
-  res.send(req.body);
   res.redirect("http://localhost:3000/Paymentsuccess");
 
 });
