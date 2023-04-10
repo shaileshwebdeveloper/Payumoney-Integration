@@ -59,7 +59,7 @@ app.post('/pay', (req, res) => {
       email: email,
       phone: phone,
       surl: 'https://payumoney.onrender.com/Paymentsuccess',
-      furl: 'https://payumoney.onrender.com/Paymentfailure',
+      furl: 'https://payumoney-integration.up.railway.app/Paymentfailure',
       hash: hash
     }
   };
@@ -120,21 +120,6 @@ app.get('/Paymentfailure', (req, res) => {
 
 
 
-
-app.post('/practice', (req, res) => {
-
-  jsonData = req.body; // Store the JSON data in the `jsonData` variable
-  console.log('Received JSON data via POST:', jsonData);
-  res.send('Received JSON data successfully');
-
-})
-
-app.get('/practice', (req, res) => {
-
-  console.log('Retrieving JSON data via GET:', jsonData);
-  res.send(jsonData);
-
-})
 
 app.listen(process.env.PORT, () => {
     
