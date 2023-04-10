@@ -58,10 +58,8 @@ app.post('/pay', (req, res) => {
       firstname: firstname,
       email: email,
       phone: phone,
-      // surl: 'https://payumoney-integration.up.railway.app/Paymentsuccess',
-      // furl: 'https://payumoney-integration.up.railway.app/Paymentfailure',
       surl: 'https://payumoney-integration.up.railway.app/Paymentsuccess',
-      furl: 'http://localhost:3001/Paymentfailure',
+      furl: 'https://payumoney-integration.up.railway.app/Paymentfailure',
       hash: hash
     }
   };
@@ -72,12 +70,12 @@ app.post('/pay', (req, res) => {
       console.error(error);
       res.send(error);
     } else {
-      console.log("***************************************")
-      console.log(response)
+      // console.log("***************************************")
+      // console.log(response)
       // console.log(response.caseless.dict.location)
 
       // res.send(response.caseless.dict.location)
-      res.send(response)
+      res.send(response.headers.location)
     }
   });
 });
