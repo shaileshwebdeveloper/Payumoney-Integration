@@ -58,7 +58,7 @@ app.post('/pay', (req, res) => {
       firstname: firstname,
       email: email,
       phone: phone,
-      surl: 'https://payumoney.onrender.com/Paymentsuccess',
+      surl: 'https://payumoney-integration.up.railway.app/Paymentsuccess',
       furl: 'https://payumoney-integration.up.railway.app/Paymentfailure',
       hash: hash
     }
