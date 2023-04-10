@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 
 app.post('/pay', (req, res) => {
 
-  // console.log(req.body)
+  console.log(req.body)
 
   const { amount, productinfo, firstname, email, phone } = req.body;
 
@@ -58,8 +58,10 @@ app.post('/pay', (req, res) => {
       firstname: firstname,
       email: email,
       phone: phone,
+      // surl: 'https://payumoney-integration.up.railway.app/Paymentsuccess',
+      // furl: 'https://payumoney-integration.up.railway.app/Paymentfailure',
       surl: 'https://payumoney-integration.up.railway.app/Paymentsuccess',
-      furl: 'https://payumoney-integration.up.railway.app/Paymentfailure',
+      furl: 'http://localhost:3001/Paymentfailure',
       hash: hash
     }
   };
@@ -70,7 +72,8 @@ app.post('/pay', (req, res) => {
       console.error(error);
       res.send(error);
     } else {
-      // console.log("***************************************")
+      console.log("***************************************")
+      console.log(response)
       // console.log(response.caseless.dict.location)
 
       // res.send(response.caseless.dict.location)
